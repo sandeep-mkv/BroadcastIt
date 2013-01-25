@@ -1,0 +1,20 @@
+body {	
+	min-width: 360px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+label {
+	font-weight: bold;
+}
+button.broadcast {
+	padding: 10px 30px;
+	font-weight: bold;
+}
+section.add-new {
+	padding: 10px 0px;
+}
+section.channels-list {
+	padding: 5px 0px;
+}
+section.channels-list ol {
+	margin-top: 10px;
+}

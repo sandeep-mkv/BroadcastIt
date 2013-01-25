@@ -1,0 +1,16 @@
+{
+  "manifest_version": 2,
+
+  "name": "Broadcast it",
+  "description": "This extension demonstrates a browser action with URLs broadcast",
+  "version": "1.0",
+
+  "permissions": [
+    "https://secure.flickr.com/"
+  ],
+  
+  "browser_action": {
+    "default_icon": "ext_icon.png",
+    "default_popup": "popup.html"
+  }
+}

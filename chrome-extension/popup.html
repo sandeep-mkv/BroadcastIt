@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+
+     <script type="text/javascript" src="jquery.min.js"></script>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+  	<button class="broadcast" title="Broadcast current active URL">Broadcast it</button>	
+  	<section class="add-new">
+  		<input id="new-channel-input" type="text" name="new_channel" placeholder="Add new channel" pattern=".{3,12}" title="3 to 12 characters"/>
+  		<input id="new-channel-submit" type="button" value="Subscribe"/>
+  	</section>
+  	
+  	<section class="channels-list">
+  		<label>Subscribed Channels:</label>
+  		<ol>
+  			<li>multunus</li>
+  			<li>xbox</li>
+  		</ol>
+  	</section>
+  </body>
+</html>
+

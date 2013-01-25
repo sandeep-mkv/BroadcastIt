@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Chase</title>
+		<link href="/stylesheets/app.css" rel="stylesheet"/>
+	</head>
+	<body>
+		<div class="container">
+			<h1>Broadcast URL</h1>
+			<div class="reset-container">
+				<input type="text" id="url"/>
+				<input type="button" value="Broadcast" id="broadcast" />
+				<div class="current-url"></div>
+			</div>
+		</div>
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script src="socket.io/socket.io.js"></script>
+		<script type="text/javascript">
+			var socket = io.connect(window.location.href);
+			var browser = {
+				id : 0
+			}
+
+			socket.on('connect', function() {
+				socket.emit('client_connected', browser);
+			});
+
+			socket.on('accepted', function(data) {
+				browser.id = data.id;
+			});
+
+			socket.on('open_url', function(url) {
+                                console.log('open url');
+                                $('.current-url').html(url);
+			});
+
+                        $('#broadcast').click(function(){
+                               console.log('broadcast click');
+                               socket.emit('broadcast', $('#url').val());
+                        })
+
+		</script>
+	</body>
+</html>
