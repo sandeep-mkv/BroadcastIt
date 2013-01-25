@@ -18,15 +18,15 @@ socket.on('open_url', function(url) {
           });
 
 
-chrome.tabs.query({'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT},
-		  function(tabs){
-		      broadcastUrl = tabs[0].url;
-		  });	
 
 chrome.browserAction.onClicked.addListener(
     function(){
-    	console.log('broadcast click');
-    	socket.emit('broadcast', broadcastUrl);
+        chrome.tabs.query({'active': true, 'windowId': chrome.windows.WINDOW_ID_CURRENT},
+		          function(tabs){
+		              broadcastUrl = tabs[0].url;
+    	                      console.log('broadcast click');
+    	                      socket.emit('broadcast', broadcastUrl);
+		          });	
     });
 
 	
