@@ -4,13 +4,16 @@
   "name": "Broadcast it",
   "description": "This extension demonstrates a browser action with URLs broadcast",
   "version": "1.0",
+  "content_security_policy": "script-src 'self' https://cdnjs.cloudflare.com; object-src 'self'",
 
   "permissions": [
-    "https://secure.flickr.com/"
+     "tabs"
   ],
   
   "browser_action": {
     "default_icon": "ext_icon.png",
     "default_popup": "popup.html"
   }
+
+ 
 }
