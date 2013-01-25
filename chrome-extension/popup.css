@@ -1,16 +1,48 @@
 body {	
 	min-width: 360px;
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 label {
-	font-weight: bold;
+	font-weight: normal;
+	font-size: 1.2em;
 }
+
 button.broadcast {
-	padding: 10px 30px;
+	padding: 20px 40px;
+	color: #FFF;
 	font-weight: bold;
+	border: 1px solid #61C419;
+	border-radius: 5px;
+	cursor:pointer;
+	width:200px;
+	margin:30px 0px 30px 85px;
+	background: #b4e391;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b4e391), color-stop(31%,#61c419), color-stop(67%,#61c419), color-stop(100%,#b4e391));
+	background: -webkit-linear-gradient(top,  #b4e391 0%,#61c419 31%,#61c419 67%,#b4e391 100%);
+	background: linear-gradient(to bottom,  #b4e391 0%,#61c419 31%,#61c419 67%,#b4e391 100%);	
 }
+button.broadcast:hover {
+	background: #b4e391;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#b4e391), color-stop(43%,#61c419), color-stop(53%,#61c419), color-stop(100%,#b4e391));
+	background: -webkit-linear-gradient(top,  #b4e391 0%,#61c419 43%,#61c419 53%,#b4e391 100%);
+	background: linear-gradient(to bottom,  #b4e391 0%,#61c419 43%,#61c419 53%,#b4e391 100%);
+}
+
 section.add-new {
 	padding: 10px 0px;
+}
+.add-new-text {
+	padding: 3px;
+}
+.add-new-button {
+	border:1px solid #7abcff;
+	cursor:pointer;
+	padding: 3px 6px;
+	border-radius: 3px;
+	background: #7abcff;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee));
+	background: -webkit-linear-gradient(top,  #7abcff 0%,#60abf8 44%,#4096ee 100%);
+	background: linear-gradient(to bottom,  #7abcff 0%,#60abf8 44%,#4096ee 100%);	
 }
 section.channels-list {
 	padding: 5px 0px;
