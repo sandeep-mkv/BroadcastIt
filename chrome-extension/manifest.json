@@ -11,9 +11,10 @@
   ],
   
   "browser_action": {
-    "default_icon": "ext_icon.png",
-    "default_popup": "popup.html"
-  }
+    "default_icon": "ext_icon.png"
+  },
 
- 
+  "background": {
+      "page": "background.html"
+  }
 }
