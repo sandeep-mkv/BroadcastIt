@@ -3,42 +3,30 @@
 	<head>
 		<title>Chase</title>
 		<link href="/stylesheets/app.css" rel="stylesheet"/>
+		<link href="/stylesheets/bootstrap.min.css" rel="stylesheet" />
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+		<style>
+		    h1 {
+		    	text-align:center;
+		    	margin-top: 20%;
+		    	
+		    }
+		</style>
+		<script type="text/javascript">
+
+	$(function(){
+		var currentdate = new Date(); 
+var datetime = " " + currentdate.getDate() + "/"
+                + (currentdate.getMonth()+1)  + "/" 
+                + currentdate.getFullYear() + " @ "  
+                + currentdate.getHours() + ":"  
+                + currentdate.getMinutes() + ":" 
+                + currentdate.getSeconds();
+            $("#current-time").text(datetime);
+        });
+		</script>
 	</head>
 	<body>
-		<div class="container">
-			<h1>Broadcast URL</h1>
-			<div class="reset-container">
-				<input type="text" id="url"/>
-				<input type="button" value="Broadcast" id="broadcast" />
-				<div class="current-url"></div>
-			</div>
-		</div>
-		<script src="http://code.jquery.com/jquery-latest.js"></script>
-		<script src="socket.io/socket.io.js"></script>
-		<script type="text/javascript">
-			var socket = io.connect(window.location.href);
-			var browser = {
-				id : 0
-			}
-
-			socket.on('connect', function() {
-				socket.emit('client_connected', browser);
-			});
-
-			socket.on('accepted', function(data) {
-				browser.id = data.id;
-			});
-
-			socket.on('open_url', function(url) {
-                                console.log('open url');
-                                $('.current-url').html(url);
-			});
-
-                        $('#broadcast').click(function(){
-                               console.log('broadcast click');
-                               socket.emit('broadcast', $('#url').val());
-                        })
-
-		</script>
+		<h1><span id="current-time"></span></h1>
 	</body>
-</html>
+	</html>
