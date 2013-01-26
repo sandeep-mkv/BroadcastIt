@@ -4,6 +4,14 @@ browser = {
     id : 0
 };
 
+var storage = chrome.storage.local;
+storage.get('channel', function(channel) {
+                if (channel) {
+                    browser.channel = channel;
+                }
+            });
+
+
 socket.on('connect', function() {
     	      socket.emit('client_connected', browser);
           });
