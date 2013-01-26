@@ -2,26 +2,17 @@
 <html>
   <head>
     <title>Getting Started Extension's Popup</title>
-    <link rel="stylesheet" type="text/css" href="popup.css">
+    <link rel="stylesheet" type="text/css" href="options.css">
     <script type="text/javascript" src="jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.10/socket.io.min.js"></script>
-    <script src="popup.js"></script>
 
   </head>
   <body>
-  	<button class="broadcast" title="Broadcast current active URL">Broadcast it</button>	
   	<section class="add-new">
   		<input id="new-channel-input" class="add-new-text" type="text" name="new_channel" placeholder="Add new channel" pattern=".{3,12}" title="3 to 12 characters"/>
   		<input id="new-channel-submit" class="add-new-button" type="button" value="Subscribe"/>
   	</section>
   	
-  	<section class="channels-list">
-  		<label>Subscribed Channels:</label>
-  		<ol>
-  			<li>multunus - (2 users)</li>
-  			<li>xbox - (16 users)</li>
-  		</ol>
-  	</section>
+        <script src="options.js"></script>
   </body>
 </html>
 

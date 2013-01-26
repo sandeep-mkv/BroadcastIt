@@ -53,12 +53,16 @@ io.sockets.on('connection', function(socket) {
 	              browser.id = socket.id;
 	              browsers.push(browser);
                       console.log('connected'+browser.id);
+                      socket.set('channel', browser.channel, function() { console.log('channel ' + browser.channel + ' saved'); } );
+                      socket.join(browser.channel);
 	              socket.emit("accepted", browser);
 	});
 	
 	socket.on('broadcast', function(url) {
-                      console.log('broadcast'+url);
-	              socket.broadcast.emit("open_url", url);
+                      socket.get('channel', function(err, channel) {
+                                     console.log('broadcast'+url);
+	                             socket.broadcast.to(channel).emit("open_url", url);
+                                 });
 	});
 
 });

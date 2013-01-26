@@ -5,9 +5,11 @@
   "description": "This extension demonstrates a browser action with URLs broadcast",
   "version": "1.0",
   "content_security_policy": "script-src 'self' https://cdnjs.cloudflare.com; object-src 'self'",
+  "options_page": "options.html",
 
   "permissions": [
-     "tabs"
+      "tabs",
+      "storage"
   ],
   
   "browser_action": {
